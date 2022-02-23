@@ -1,0 +1,118 @@
+.main-page {}
+
+.container {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hotel {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 425px) {
+      justify-content: center;
+    }
+
+    & > a {
+      text-decoration: none;
+      box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+      margin-right: 20px;
+      margin-bottom: 20px;
+      transition: all 0.3s;
+
+      @media screen and (max-width: 425px) {
+        margin-right: 0;
+      }
+
+      &:hover {
+        box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+      }
+      &:focus {
+        box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+      }
+    }
+  }
+
+  &-item {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 15px;
+    width: 200px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &__link {
+    }
+    &__img {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    &__title {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      color: #000;
+    }
+    &__desc {
+      font-size: 14px;
+      color: #000;
+    }
+  }
+}
+
+.room {
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 765px) {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  &-item {
+    margin-right: 20px;
+
+    @media screen and (max-width: 765px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      @media screen and (max-width: 765px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__text {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+input.yellow-input {
+  border-bottom: 1px solid #fff !important;
+  box-shadow: 0 1px 0 0 #fff !important;
+
+  &:focus {
+    border-bottom: 1px solid #ffeb3b !important;
+    box-shadow: 0 1px 0 0 #ffeb3b !important;
+
+    & + label {
+      color: #ffeb3b !important;
+    }
+  }
+
+  & + label {
+    color: #fff !important;
+  }
+}
